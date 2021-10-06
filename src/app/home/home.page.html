@@ -1,20 +1,56 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
 
-<ion-content [fullscreen]="true">
+<ion-content   >
   <ion-header collapse="condense">
+    
     <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+      <ion-title color="medium">Home</ion-title>
     </ion-toolbar>
-  </ion-header>
+  <ion-img style="width: 414px; height: 150px;"src="assets/img/k.jpg" ></ion-img>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
-</ion-content>
+      <ion-text color="medium" >
+        <h2>List of products in sale:</h2>
+      </ion-text>
+    
+  </ion-header>
+   <ion-list >
+     <ion-item *ngFor="let prod of prods">
+     <ion-thumbnail size="300px"   slot="start">
+       <ion-img  [src] ="prod.image | async"></ion-img>
+     </ion-thumbnail >
+     <ion-label  color="medium">
+       <h3 color="primary">  {{prod.productName}}  </h3>
+       <h5 color="primary">{{prod.productDescription}}</h5>
+       <h5 color="primary">{{prod.location}}</h5>
+       <h5 color="primary">{{prod.phone}}</h5>
+       <h5 color="primary">{{prod.price}}</h5>
+
+     </ion-label></ion-item>
+   </ion-list></ion-content>
+   
+   <ion-toolbar>
+   <ion-tabs class="app">
+     
+    <ion-tab-bar slot="bottom">
+      <ion-tab-button (click)="allerlogin()">
+        <ion-icon name="person"></ion-icon>
+        <ion-label>Login</ion-label>
+      </ion-tab-button>
+  
+      <ion-tab-button  >
+        <ion-icon name="home"></ion-icon>
+        <ion-label>Home</ion-label>
+      </ion-tab-button>
+  
+      <ion-tab-button (click)="allermap()">
+        <ion-icon name="map"></ion-icon>
+        <ion-label>Map</ion-label>
+      </ion-tab-button>
+  
+      <ion-tab-button (click)="allerabout()">
+        <ion-icon name="information-circle"></ion-icon>
+        <ion-label>About</ion-label>
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>
+
+</ion-toolbar>

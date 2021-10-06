@@ -1,5 +1,7 @@
 {
   "name": "firebaseAuth",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

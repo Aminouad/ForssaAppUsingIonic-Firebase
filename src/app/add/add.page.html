@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title color="medium">Add Product</ion-title>
+  </ion-toolbar>
+  <ion-img style="width: 414px; height: 150px;"src="assets/img/k.jpg" ></ion-img>
+
+      
+</ion-header>
+
+<ion-content [fullscreen]="true"  no-scroll padding>
+  
+  <ion-toolbar class="op">
+    <ion-text color="medium" align="center">
+      <h2>Please add your Product information </h2>
+    </ion-text>
+  </ion-toolbar>
+<ion-list class="op1">
+  <ion-item>
+    <ion-label position="floating">Product Name</ion-label>
+    <ion-input type="text" [(ngModel)]="productName"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Product Description</ion-label>
+    <ion-input type="text" [(ngModel)]="productDescription"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Location</ion-label>
+    <ion-input type="text" [(ngModel)]="location" ></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Phone</ion-label>
+    <ion-input type="text" [(ngModel)]="phone"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Price</ion-label>
+    <ion-input type="text" [(ngModel)]="price"></ion-input>
+  </ion-item>
+  <ion-item>
+    <input type="file" #id_f>
+  </ion-item>
+</ion-list>
+<div>
+    <ion-button color="medium" (click)="addP()">Add</ion-button>
+
+</div>
+<div>
+  <ion-button color="medium" (click)="alleronly()">Delete(Admin)</ion-button>
+
+</div>
+</ion-content>

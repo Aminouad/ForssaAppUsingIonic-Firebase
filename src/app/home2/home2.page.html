@@ -1,0 +1,54 @@
+<ion-content   >
+  <ion-header collapse="condense">
+    
+    <ion-toolbar>
+      <ion-title color="medium">Home</ion-title>
+    </ion-toolbar>
+  <ion-img style="width: 414px; height: 150px;"src="assets/img/k.jpg" ></ion-img>
+
+      <ion-text color="medium" >
+        <h2>List of products in sale:</h2>
+      </ion-text>
+    
+  </ion-header>
+   <ion-list >
+     <ion-item *ngFor="let prod of prods">
+     <ion-thumbnail size="300px"   slot="start">
+       <ion-img  [src] ="prod.image | async"></ion-img>
+     </ion-thumbnail >
+     <ion-label  color="medium">
+       <h3 color="primary">  {{prod.productName}}  </h3>
+       <h5 color="primary">{{prod.productDescription}}</h5>
+       <h5 color="primary">{{prod.location}}</h5>
+       <h5 color="primary">{{prod.phone}}</h5>
+       <h5 color="primary">{{prod.price}}</h5>
+
+     </ion-label></ion-item>
+   </ion-list></ion-content>
+
+   <ion-toolbar>
+
+   <ion-tabs>
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button (click)=" alleradd()">
+      <ion-icon name="rocket"></ion-icon>
+      <ion-label>AddProduct</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button (click)="allerhome()" >
+      <ion-icon name="home"></ion-icon>
+      <ion-label>Home</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button (click)="allermap()">
+      <ion-icon name="map"></ion-icon>
+      <ion-label>Map</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button (click)="allerabout()">
+      <ion-icon name="information-circle"></ion-icon>
+      <ion-label>About</ion-label>
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-tabs>
+

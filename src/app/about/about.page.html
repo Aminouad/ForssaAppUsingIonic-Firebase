@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title color="medium">About</ion-title>
+  </ion-toolbar>
+  <ion-img style="width: 414px; height: 150px;"src="assets/img/k.jpg" ></ion-img>
+
+  <ion-text color="medium" class="ion-text-center" >
+    <h3>Developped by Amine Ouadrani </h3>
+  </ion-text>  
+</ion-header>
+
+<ion-content>
+  <ion-img style="width: 414px; height: 150px;"src="assets/img/enig.png" ></ion-img>
+  <ion-tabs>
+     
+    <ion-tab-bar slot="bottom">
+      <ion-tab-button (click)="allerlogin()">
+        <ion-icon name="person"></ion-icon>
+        <ion-label>Login</ion-label>
+      </ion-tab-button>
+  
+      <ion-tab-button  (click)="allerhome()">
+        <ion-icon name="home"></ion-icon>
+        <ion-label>Home</ion-label>
+      </ion-tab-button>
+  
+      <ion-tab-button (click)="allermap()">
+        <ion-icon name="map"></ion-icon>
+        <ion-label>Map</ion-label>
+      </ion-tab-button>
+  
+      <ion-tab-button (click)="allerabout()">
+        <ion-icon name="information-circle"></ion-icon>
+        <ion-label>About</ion-label>
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>
+
+</ion-content>
